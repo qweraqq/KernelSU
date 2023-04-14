@@ -380,6 +380,7 @@ int ksu_handle_setuid(struct cred *new, const struct cred *old) {
 	if (!new || !old) {
 		return 0;
 	}
+	return 0;
 
 	kuid_t new_uid = new->uid;
 	kuid_t old_uid = old->uid;

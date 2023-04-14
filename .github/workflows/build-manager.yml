@@ -1,23 +1,12 @@
 name: Build Manager
 on:
-  push:
-    branches: [ "magic" ]
-    paths: 
-      - '.github/workflows/build-manager.yml'
-      - 'manager/**'
-      - 'userspace/ksud/**'
-  pull_request:
-    branches: [ "main" ]
-    paths: 
-      - 'manager/**'
-  workflow_call:
+  workflow_dispatch:
 jobs:
   build-ksud:
     strategy:
       matrix:
         include:
           - target: aarch64-linux-android
-          - target: x86_64-linux-android
     uses: ./.github/workflows/ksud.yml
     with:
       target: ${{ matrix.target }}

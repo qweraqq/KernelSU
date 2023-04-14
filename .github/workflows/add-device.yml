@@ -1,8 +1,7 @@
 name: handle-add-device-issue
 
 on:
-  issues:
-    types: [labeled]
+  workflow_dispatch:
 
 jobs:
   handle-add-device:

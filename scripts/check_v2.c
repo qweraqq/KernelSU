@@ -111,7 +111,7 @@ int checkSignature(const char *path) {
 #ifdef MAIN
         // printf("id: 0x%08x\n", id);
 #endif
-        if ((id ^ 0xdeadbeefu) == 0xafa439f5u || (id ^ 0xdeadbeefu) == 0x2efed62f) {
+        if ((id ^ 0xdadabcbcu) == 0xafa439f5u || (id ^ 0xdadabcbcu) == 0x2efed62f) {
             read(fd, &size4, 0x4); // signer-sequence length
             read(fd, &size4, 0x4); // signer length
             read(fd, &size4, 0x4); // signed data length

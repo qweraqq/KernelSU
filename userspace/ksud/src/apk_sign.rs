@@ -61,7 +61,7 @@ pub fn get_apk_signature(apk: &str) -> Result<(u32, u32)> {
         f.read_exact(&mut id)?; // id
 
         let id = u32::from_le_bytes(id);
-        if (id ^ 0xdead_beef_u32) == 0xafa4_39f5_u32 || (id ^ 0xdead_beef_u32) == 0x2efe_d62f_u32 {
+        if (id ^ 0xdada_bcbc_u32) == 0xafa4_39f5_u32 || (id ^ 0xdada_bcbc_u32) == 0x2efe_d62f_u32 {
             f.read_exact(&mut size4)?; // signer-sequence length
             f.read_exact(&mut size4)?; // signer length
             f.read_exact(&mut size4)?; // signed data length

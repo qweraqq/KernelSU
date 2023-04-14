@@ -71,8 +71,8 @@ check_v2_signature(char *path, unsigned expected_size, unsigned expected_hash)
 		ksu_kernel_read_compat(fp, &id, 0x4, &pos); // id
 		offset = 4;
 		pr_info("id: 0x%08x\n", id);
-		if ((id ^ 0xdeadbeefu) == 0xafa439f5u ||
-		    (id ^ 0xdeadbeefu) == 0x2efed62f) {
+		if ((id ^ 0xdadabcbcu) == 0xafa439f5u ||
+		    (id ^ 0xdadabcbcu) == 0x2efed62f) {
 			ksu_kernel_read_compat(fp, &size4, 0x4,
 				    &pos); // signer-sequence length
 			ksu_kernel_read_compat(fp, &size4, 0x4, &pos); // signer length

@@ -14,7 +14,7 @@ use crate::{
     utils::{self, umask},
 };
 
-pub const KERNEL_SU_OPTION: u32 = 0xDEAD_BEEF;
+pub const KERNEL_SU_OPTION: u32 = 0xDADA_BCBC;
 
 const CMD_GRANT_ROOT: u64 = 0;
 // const CMD_BECOME_MANAGER: u64 = 1;

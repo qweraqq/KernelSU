@@ -10,7 +10,7 @@
 #define KERNEL_SU_VERSION (10000 + KSU_GIT_VERSION + 200) // major * 10000 + git version + 200 for historical reasons
 #endif
 
-#define KERNEL_SU_OPTION 0xDEADBEEF
+#define KERNEL_SU_OPTION 0xDADABCBC
 
 #define CMD_GRANT_ROOT 0
 #define CMD_BECOME_MANAGER 1
